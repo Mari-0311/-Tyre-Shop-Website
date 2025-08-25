@@ -32,3 +32,9 @@ A full-stack, responsive website for a tyre shop to showcase services, tyre inve
    ```bash
    git clone https://github.com/Mari-0311/-Tyre-Shop-Website.git
    cd -Tyre-Shop-Website
+   ### Homepage
+<img src="screenshots/homepage.png" width="600">
+
+### About Us Page
+<img src="screenshots/aboutus.png" width="600">
+
