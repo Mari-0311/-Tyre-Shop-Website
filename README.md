@@ -1,23 +1,34 @@
 # Tyre Shop Website
 
-A full-stack responsive website for a tyre shop to showcase services, tyre inventory, customer reviews, and contact details. 
-The platform includes an admin dashboard for managing users and customer reviews.
+A full-stack, responsive website for a tyre shop to showcase services, tyre inventory, customer reviews, and contact details. Includes an admin area to manage users and reviews.
 
 ## Features
-- User registration and login system
-- Responsive navigation bar with mobile hamburger menu
-- Service listings with tyre details
-- Customer review submission with star rating and image upload
-- Google Maps integration for shop location
-- Admin dashboard to manage signups and customer reviews
+- User registration & login
+- Responsive navigation (mobile hamburger menu)
+- Service & tyre listings
+- Customer reviews with star rating (and image upload planned)
+- Google Maps location embed
+- Admin dashboard for user & review management
 
 ## Tech Stack
-- Frontend: HTML, CSS, JavaScript
-- Backend: Django
-- Database: MySQL
-- Tools: Git, VS Code, MySQL Workbench
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Django (Python)
+- **Database:** MySQL
+- **Tools:** Git, VS Code, MySQL Workbench
 
-## Installation
-1. Clone the repo:
+## Screenshots
+
+### Homepage
+![Homepage](screenshots/homepage.png)
+
+### About Us Page
+![About Us](screenshots/aboutus.png)
+
+## Getting Started (Local)
+
+> Prereqs: Python 3.10+ and MySQL installed.
+
+1. **Clone**
    ```bash
    git clone https://github.com/Mari-0311/-Tyre-Shop-Website.git
+   cd -Tyre-Shop-Website
