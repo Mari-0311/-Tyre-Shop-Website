@@ -1,0 +1,620 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Top Bar */
+.up {
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px 20px;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.up .button {
+  cursor: pointer;
+  padding: 6px 12px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.up .button:hover {
+  background-color: yellow;
+  border-radius: 5px;
+}
+
+.up input[type="text"] {
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  width: 160px;
+  transition: box-shadow 0.3s ease;
+}
+
+.up input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px #007bff;
+}
+.up a {
+  color: white;   /* makes it white like other text */
+  text-decoration: none; /* removes underline */
+  cursor: pointer;
+}
+
+.up a:hover {
+  color: yellow;  /* optional hover effect */
+}
+/* Header */
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: white; /* White background */
+  color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Logo */
+.header-left .logo {
+  width: 120px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.4));
+}
+
+/* Navigation links */
+.header-center {
+  display: flex; /* Always show on desktop */
+  gap: 20px;
+  align-items: center;
+}
+
+.header-center a {
+  color: #000; /* Black text for normal state */
+  margin: 0 15px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.header-center a:hover {
+  color: red; /* Red hover color */
+}
+
+/* Sign-in button */
+.header-right .signin-btn {
+  background-color: #ffb400; /* Gold color */
+  color: white;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.header-right .signin-btn:hover {
+  background-color: #e6a200; /* Slightly darker gold */
+}
+
+/* Hamburger Menu (mobile) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: yellow;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 32px;         
+  height: 4px;         
+  margin: 6px 0;       
+  background: white;   
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .header-center {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 15px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+  }
+
+  .header-center.show {
+    display: flex;
+  }
+
+  .header-center a {
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #444;
+    text-align: left;
+  }
+
+  .header-center a:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Banner */
+.banner {
+  margin-top: 15px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  max-height: 320px;
+}
+
+.banner .ban-pic {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.banner .ban-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Tyre Info Section */
+.tyre-info {
+  display: flex;
+  padding: 40px 60px;
+  gap: 40px;
+  background: #f9fafc;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.tyre-text h2 {
+  margin-bottom: 15px;
+  color: Red;
+  font-size: 28px;
+}
+
+.tyre-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.tyre-text h3 {
+  color: #333;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.tyre-text ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #444;
+}
+
+.tyre-text ul li {
+  margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #333;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 8px;
+}
+
+.contact-section h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.contact-section .black {
+  color: white;
+}
+
+.contact-section .red {
+  color: red;
+}
+
+.contact-section .contact-numbers p {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.contact-section .contact-numbers a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-section .contact-numbers a:hover {
+  text-decoration: underline;
+}
+
+/* Talk Section */
+.talk {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+.talk h5 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.talk .us {
+  color: red;
+}
+
+.talk .features {
+  font-size: 18px;
+  color: black;
+}
+
+/* Wrapper for both sections */
+.page-sections {
+  display: flex;
+  gap: 20px;
+  height: 500px;
+}
+
+/* Our Services section */
+.services {
+  flex: 1;
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+.services h4 {
+  margin-bottom: 10px;
+}
+
+.services p {
+  padding: 8px 0;
+}
+
+/* Our Location section */
+.location {
+  flex: 1;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.location h1 {
+  margin: 0;
+  padding: 10px;
+  background: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+}
+
+.location iframe {
+  width: 100%;
+  height: calc(100% - 50px);
+  border: none;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #eee;
+  padding: 40px 20px 10px;
+  font-size: 16px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+}
+
+.footer-section h2,
+.footer-section h3,
+.footer-section h4,
+.footer-section h5 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #ffdd00;
+}
+
+.footer-section p,
+.footer-section ul {
+  color: #bbb;
+  font-weight: 400;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  display: inline-block;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #ffdd00;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Copyright */
+.copyright {
+  text-align: center;
+  padding: 10px 0 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .tyre-info {
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+
+  .tyre-info img {
+    width: 100%;
+    max-height: 320px;
+  }
+
+  .talk {
+    padding: 20px 30px;
+    flex-direction: column;
+  }
+
+  .child-right {
+    max-width: 100%;
+    height: 320px;
+  }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 380px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: popup 0.3s ease;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-content input,
+.modal-content select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.modal-content button {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background: #444;
+}
+
+.modal-content p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.modal-content a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
+}
+
+@keyframes popup {
+  from {transform: scale(0.7);}
+  to {transform: scale(1);}
+}
+
+/* Top bar links */
+.up a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.up a:hover {
+  color: yellow;
+}
+
+/* Sign In button styling */
+.signin-btn {
+  background-color: #f9a825;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.signin-btn:hover {
+  background-color: #d48806;
+}
+
+/* Fix for mobile */
+@media (max-width: 768px) {
+  .signin-btn {
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+  }
+}
+
+.nav-links .signin-btn {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  background: #f9a825;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* hide mobile signin on large screens */
+.mobile-signin {
+  display: none;
+}
+
+/* show when nav is toggled in mobile */
+@media (max-width: 768px) {
+  .mobile-signin {
+    display: block;
+    padding: 10px;
+  }
+}
+/* ------------------------------
+   MOBILE MENU FIX
+------------------------------ */
+@media (max-width: 768px) {
+  .header-center {
+    display: none; /* hide by default on mobile */
+    flex-direction: column;
+    background: #222; /* dark dropdown */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 15px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+  }
+
+  /* when hamburger is clicked */
+  .header-center.show {
+    display: flex;
+  }
+
+  .header-center a {
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #444;
+    text-align: left;
+  }
+
+  .header-center a:last-child {
+    border-bottom: none;
+  }
+}

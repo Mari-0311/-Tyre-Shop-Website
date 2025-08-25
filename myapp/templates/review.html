@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JK Tyre Xpress Wheels, Ma Eswari Enterprises</title>
+  <link rel="stylesheet" href="../static/review.css">
+</head>
+<body>
+
+  <div class="up">
+    <a href="#" onclick="alert('Call us at: +91 9167082342')">Customer Care</a>
+    <a href="/review" class="button">Reviews</a>
+    <a class="button">+91 9167082342</a>
+    <input type="text" placeholder="Search">
+  </div>
+
+  <div class="header-bar">
+    <div class="header-left">
+      <img src="../static/image/jk.jpeg" alt="Logo" class="logo">
+    </div>
+ <!-- Hamburger -->
+    <div class="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">&#9776;</div>
+
+    <nav class="header-center">
+      <a href="/">Home</a>
+      <a href="/about">About Us</a>
+      <a href="/wheels">Tire</a>
+      <a href="/service">Services</a>
+      <a href="/review">Review</a>
+    </nav>
+      </div>
+
+  <div class="container">
+    <h1>Customer Reviews</h1>
+
+    
+    <form class="form">
+      <h3>Leave a Review</h3>
+      <input type="text" placeholder="Your Name" name="username" required>
+      <textarea rows="4" placeholder="Write your review here..." name="review" required></textarea>
+
+      <div class="rating-stars">
+  <input type="radio" id="star5" name="rating" value="5">
+  <label for="star5">★</label>
+  
+  <input type="radio" id="star4" name="rating" value="4">
+  <label for="star4">★</label>
+  
+  <input type="radio" id="star3" name="rating" value="3">
+  <label for="star3">★</label>
+  
+  <input type="radio" id="star2" name="rating" value="2">
+  <label for="star2">★</label>
+  
+  <input type="radio" id="star1" name="rating" value="1">
+  <label for="star1">★</label>
+</div>
+
+
+      <button type="submit">Submit Review</button>
+    </form>
+
+    
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2>Contact Us</h2>
+        <p> &#9742; <a href="tel:+919167082342">+91 9167082342</a></p>
+      <p> &#9993; <a href="mailto:marimuthumakt@gmail.com">marimuthumakt@gmail.com</a></p>
+      </div>
+           <div class="footer-section">
+        <h4>Location</h4>
+        <p>	No 4/192/G
+Sattur
+Virudhunagar - 626203
+Near TNSTC Nagar</p>
+      </div>
+      <div class="footer-section">
+        <h5>Services</h5>
+        
+          <p><a href="#">Wheel Alignment</a></p>
+          <p><a href="#">Tyre Fitting</a></p>
+        
+      </div>
+    </div>
+
+    <div class="copyright">
+      &copy; 2025 JK Tyre. All rights reserved.
+    </div>
+  </footer>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.header-center');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>
